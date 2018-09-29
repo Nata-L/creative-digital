@@ -1,0 +1,151 @@
+.intro {
+	background: $bg-color--main url("../images/intro-bg.jpg") 50% no-repeat;
+	background-size: cover;
+	// height: 100vh;
+	
+	color: $color-text--light;
+	// position: relative;
+}
+
+.intro-content-container {
+	padding-top: 50px;
+	padding-bottom: 500px;
+	@include c-c;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 1150px;
+	margin: auto;
+
+	font-family: $font-family-text--additional;
+	font-weight: 600;
+	color: $color-text--white;
+	font-size: 24px;
+	line-height: 2.5;
+	text-transform: uppercase;
+}
+
+.main__nav {
+	width: 48%;
+	position: relative;
+}
+
+.main-nav__list {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	// position: relative;
+}	
+.main-nav__link{
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: $color-text--white;
+		position: absolute;
+		bottom: 20%;
+		transform: scaleX(0);
+		transition: transform 0.3s;	
+	}
+}
+
+.main-nav__link:hover::after {
+	transform: scaleX(1);
+	}
+
+.intro-text-container {
+	margin-top: 285px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 975px;
+	text-align: center;
+}
+
+.intro__title {
+	font-family: $font-family-text--additional;
+	font-size: 72px;
+	font-weight: 700;
+	color: $color-text--light;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+
+.intro__descr {
+	font-family: $font-family-text--main;
+	// color: #fefdfd;
+	color: $color-text--light;
+	font-size: 30px;
+	font-style: italic;
+	line-height: 1.2;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 704px;
+}
+
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+}
+
+.menu-toggle__btn {
+	fill: #ffffff;
+}
+
+@media screen and (max-width: 900px) {
+	.main-nav__list {
+		display: none;
+		position: absolute;
+		right: 0;
+		margin-right: -15rem;
+	}
+
+	.main__nav {
+		position: absolute;
+		right: 0;
+	}
+
+	.main-nav__link {
+		width: 120px;
+		text-align: right;
+	}
+	
+	.main-nav__item {
+		display: block;
+	}
+
+	.menu-toggle {
+		display: block;
+		margin-right: -18rem;
+	}
+
+	.intro__title {
+		font-size: 36px;
+	}
+
+	.intro__descr {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.intro__title {
+		font-size: 18px;
+	}
+	.intro__descr {
+		font-size: 8px;
+	}
+}
+
+// @media screen and (max-width: 414px) {
+// 	.intro__title {
+// 		font-size: 15px;
+// 	}
+// 	.intro__descr {
+// 		font-size: 8px;
+// 	}
+// }

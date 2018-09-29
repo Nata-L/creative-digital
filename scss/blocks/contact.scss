@@ -1,0 +1,86 @@
+.contact {
+	background-color: $bg-color--main;
+	position: relative;
+
+	&__scroll-up {
+		font-size: 0;
+		position: absolute;
+		right: 100px;
+		bottom: 15px;
+		z-index: 2;
+		width: 85px;
+		height: 85px;
+		background: rgba($bg-color--main, 0.5) url("../img/arrow-top.png") no-repeat 50%;
+		scroll-behavior: smooth;
+
+		&:hover {
+			background-color: $bg-color--main;
+			bottom: 25px;
+			transition: all 0.7s;
+    	}
+	}
+}
+
+.contact__back-map {
+	height:  100%;
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+	opacity: 0.5;
+}
+
+.contact-content-container {
+	overflow: hidden;
+	padding: 54px 0;
+	position: relative;
+	z-index: 1;
+}
+
+.contact__title {
+	@include title-section ($color-text--white);
+
+	&::before {
+      display: block;
+      content: '';
+      height: 60px;
+      width: 60px;
+      background: url('../img/location-title-icon.png') no-repeat;
+      margin: 0 auto 20px;
+    }
+}
+
+.contact-moving-elements {
+	margin: 50px 0;
+}
+
+.contact-moving-elements__address,
+.contact-moving-elements__phone {
+	position: relative;
+	left: calc(100% - 91px);
+	background-color: rgba($bg-color--additional, 0.5);
+	width: 348px;
+	height: 91px;
+	display: flex;
+	align-items: center;
+
+	&:hover {
+    left: calc(100% - 348px);
+    transition: 0.7s;
+  }
+
+  &::before {
+  	content: '';
+      width: 91px;
+      height: 91px;
+      margin-right: 40px;
+      // background-color: $bg-color--main;
+  }
+}
+
+.contact-moving-elements__address::before {
+	background: $bg-color--main url('../img/address.png') no-repeat 50%;
+}
+.contact-moving-elements__phone::before {
+	background: $bg-color--main url('../img/phone.png') no-repeat 50%;
+}
+

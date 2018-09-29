@@ -1,0 +1,73 @@
+@font-face {
+	// font-family: 'proxima_nova_rgbold';
+	font-family: 'Proxima Nova';
+	src: url('../fonts/proxima_nova_bold-webfont.woff2') format('woff2'),
+	     url('../fonts/proxima_nova_bold-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	// font-family: 'proxima_nova_ltsemibold';
+	font-family: 'Proxima Nova';
+	src: url('../fonts/proxima_nova_semibold-webfont.woff2') format('woff2'),
+	     url('../fonts/proxima_nova_semibold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	// font-family: 'proxima_nova_rgbold';
+	font-family: 'Proxima Nova';
+	src: url('fonts/proxima-nova-regular.otf') format('otf');
+	     /*url('fonts/') format('woff');*/
+	font-weight: 400;
+	font-style: normal;
+}
+
+// bg-color :
+$bg-color--main: #9f9acf; 
+$bg-color--additional: #ebebeb;
+// color :
+$color-text: #665f60;
+$color-text--light: #fefcfe;
+$color-text--white: #ffffff;
+$color-btn--active: #6a64a0;
+
+// fonts :
+$section-title-font: 600 36px 'Proxima Nova', Arial, sans-serif;
+$font-family-text--main: 'PT Sans', Arial, sans-serif;
+$font-family-text--additional: 'Proxima Nova', Arial, sans-serif;
+
+// content-container :
+@mixin c-c {
+	max-width: 1210px;
+	// min-width: 400px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: auto;
+}
+
+@mixin title-section ($color) {
+	font: $section-title-font;
+	text-transform: uppercase;
+	color: $color-text--light;
+}
+
+@mixin button ($color){
+	border: 1px solid $color;
+	color: $color;
+	font-style: italic;
+	font-size: 20px;
+	width: 195px;
+	height: 50px;
+
+	&:hover{
+		box-shadow: 0px 0px 93px -7px $color-btn--active inset;
+	}
+
+	&:active {
+		color: $color-text--white;
+		background-color: $color-btn--active;
+	}
+}

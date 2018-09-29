@@ -1,0 +1,134 @@
+.services {
+	background-color: $bg-color--additional;
+}
+
+.services-content-container {
+	display: flex;
+	width: 1210px;
+	padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.services-grid {
+	display: flex;
+	flex-flow: row wrap;
+	// width: 760px;
+	// height: 800px;
+
+
+	&__item {
+		width: 380px;
+		height: 400px;
+		text-align: center;
+		// padding: 99px 92px 134px;
+		
+	}
+	
+	&__title {
+		font-family: $font-family-text--main;
+		font-size: 24px;
+		color: $color-text;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-size: 18px;
+		font-style: italic;
+		color: $color-text;
+	}
+
+	&__img1 {
+		width: 47px;
+		height: 61px;
+		margin: 99px auto 30px;
+	}
+
+	&__img2 {
+		width: 58px;
+		height: 59px;
+		margin: 99px auto 30px;
+	}
+
+	&__img3 {
+		width: 50px;
+		height: 61px;
+		margin: 99px auto 30px;
+	}
+
+	&__img4 {
+		width: 36px;
+		height: 61px;
+		margin: 99px auto 30px;
+	}
+}
+
+.services-title-container {
+	// width: 410px;
+	box-sizing: border-box;
+	height: 800px;
+	text-align: center;
+	background:  url('../img/service-bg.jpg') 50% no-repeat;
+	background-size: cover;
+	background-color: $bg-color--main;
+	margin-left: -22px;
+	padding-left: 20px;
+    padding-right: 20px;
+}
+
+.services-grid__item--gray-bg {
+	background-color: #dbdbdb;
+}
+
+.services-title {
+	margin-bottom: 118px;
+
+	@include title-section ($color-text--light);
+
+	&:before {
+		content:'';
+		display: block;
+		width: 62px;
+		height: 60px;
+		background: url('../img/service-title-icon.png')  no-repeat;
+		margin: 115px auto 20px;
+	}
+
+	&__bloquote {
+		color: $color-text--light;
+		font-style: italic;
+		font-size: 18px;
+
+		span {
+		font-weight: 700;
+		font-style: normal;
+		}
+	}
+}
+
+@media screen and (max-width: 805px) {
+	.services-content-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.services-title-container {
+		margin-left: 0;
+		height: 400px;
+		order: -1;
+	}
+
+	.services-grid {
+		flex-direction: column;
+	}
+
+	.services-grid__item {
+		width: 100%;
+	}
+
+	.services-title {
+		margin-bottom: 50px;
+	}
+}
